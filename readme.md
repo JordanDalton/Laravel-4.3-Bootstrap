@@ -1,3 +1,12 @@
+What's included?
+
+* Migrations
+* Login
+* Registration
+* Password Reset
+* Laracast Flash
+* Twitter Boostrap
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
