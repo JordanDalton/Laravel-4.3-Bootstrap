@@ -26,34 +26,34 @@
                                 @include('layouts.partials.errors', ['errors' => $errors->getBag('default')])
 
                                 <!-- Begin Form -->
-                                {{ Form::open() }}
+                                {!! Form::open() !!}
 
                                     <!-- Email Form Input -->
-                                    <div class="form-group {{ hasError('email', $errors) }}">
-                                        {{ Form::label('email', 'Email:') }}
-                                        {{ Form::text('email', null, ['class' => 'form-control']) }}
+                                    <div class="form-group {!! hasError('email', $errors) !!}">
+                                        {!! Form::label('email', 'Email:') !!}
+                                        {!! Form::text('email', null, ['class' => 'form-control']) !!}
                                     </div>
 
                                     <!-- Password Form Input -->
-                                    <div class="form-group {{ hasError('password', $errors) }}">
-                                        {{ Form::label('password', 'Password:') }}
-                                        {{ Form::password('password', ['class' => 'form-control']) }}
+                                    <div class="form-group {!! hasError('password', $errors) !!}">
+                                        {!! Form::label('password', 'Password:') !!}
+                                        {!! Form::password('password', ['class' => 'form-control']) !!}
                                     </div>
 
 
                                     <!-- Password_confirm Form Input -->
-                                    <div class="form-group {{ hasError('password_confirmation', $errors) }}">
-                                        {{ Form::label('password_confirmation', 'Re-enter Password:') }}
-                                        {{ Form::password('password_confirmation', ['class' => 'form-control']) }}
+                                    <div class="form-group {!! hasError('password_confirmation', $errors) !!}">
+                                        {!! Form::label('password_confirmation', 'Re-enter Password:') !!}
+                                        {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                                     </div>
 
 
                                     <!-- Submit Form Input -->
                                     <div class="form-group">
-                                        {{ Form::submit('Sign  me up!', ['class' => 'btn btn-success form-control']) }}
+                                        {!! Form::submit('Sign  me up!', ['class' => 'btn btn-success form-control']) !!}
                                     </div>
 
-                                {{ Form::close() }}
+                                {!! Form::close() !!}
                                 <!-- End Form -->
 
                             </div>
@@ -61,7 +61,7 @@
 
                             <!-- .panel-footer -->
                             <div class="panel-footer">
-                                Already have an account? <a class="btn btn-xs btn-info" href="{{ route('login') }}">Log in!</a>
+                                Already have an account? <a class="btn btn-xs btn-info" href="{!! route('login') !!}">Log in!</a>
                             </div>
                             <!-- /.panel-footer -->
 

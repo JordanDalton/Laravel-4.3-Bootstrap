@@ -26,21 +26,21 @@
                                 @include('layouts.partials.errors', ['errors' => $errors->getBag('default')])
 
                                 <!-- Begin Form -->
-                                {{ Form::open() }}
+                                {!! Form::open() !!}
 
                                     <!-- Email Form Input -->
-                                    <div class="form-group {{ hasError('email', $errors) }}">
-                                        {{ Form::label('email', 'Email:') }}
-                                        {{ Form::text('email', null, ['class' => 'form-control']) }}
+                                    <div class="form-group {!! hasError('email', $errors) !!}">
+                                        {!! Form::label('email', 'Email:') !!}
+                                        {!! Form::text('email', null, ['class' => 'form-control']) !!}
                                     </div>
 
 
                                     <!-- Submit Form Input -->
                                     <div class="form-group">
-                                        {{ Form::submit('Submit', ['class' => 'btn btn-success form-control']) }}
+                                        {!! Form::submit('Submit', ['class' => 'btn btn-success form-control']) !!}
                                     </div>
 
-                                {{ Form::close() }}
+                                {!! Form::close() !!}
                                 <!-- End Form -->
 
                             </div>

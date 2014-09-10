@@ -26,26 +26,26 @@
                                 @include('layouts.partials.errors', ['errors' => $errors->getBag('default')])
 
                                 <!-- Begin Form -->
-                                {{ Form::open(['route' => 'login']) }}
+                                {!! Form::open(['route' => 'login']) !!}
 
                                 <!-- Email Form Input -->
-                                <div class="form-group {{ hasError('email', $errors) }}">
-                                    {{ Form::label('email', 'Email:') }}
-                                    {{ Form::text('email', null, ['class' => 'form-control']) }}
+                                <div class="form-group {!! hasError('email', $errors) !!}">
+                                    {!! Form::label('email', 'Email:') !!}
+                                    {!! Form::text('email', null, ['class' => 'form-control']) !!}
                                 </div>
 
                                 <!-- Password Form Input -->
-                                <div class="form-group {{ hasError('password', $errors) }}">
-                                    {{ Form::label('password', 'Password:') }}
-                                    {{ Form::password('password', ['class' => 'form-control']) }}
+                                <div class="form-group {!! hasError('password', $errors) !!}">
+                                    {!! Form::label('password', 'Password:') !!}
+                                    {!! Form::password('password', ['class' => 'form-control']) !!}
                                 </div>
 
                                 <!-- Submit Form Input -->
                                 <div class="form-group">
-                                    {{ Form::submit('Log me in', ['class' => 'btn btn-success form-control']) }}
+                                    {!! Form::submit('Log me in', ['class' => 'btn btn-success form-control']) !!}
                                 </div>
 
-                                {{ Form::close() }}
+                                {!! Form::close() !!}
                                 <!-- End Form -->
 
                             </div>
@@ -53,8 +53,8 @@
 
                             <!-- .panel-footer -->
                             <div class="panel-footer">
-                                <a class="btn btn-xs btn-info" href="{{ route('register') }}">Not a member? <strong>Sign Up!</strong></a>
-                                <a class="btn btn-xs btn-primary pull-right" href="{{ route('remind') }}">Forgot your password? <strong>Reset it!</strong></a>
+                                <a class="btn btn-xs btn-info" href="{!! route('register') !!}">Not a member? <strong>Sign Up!</strong></a>
+                                <a class="btn btn-xs btn-primary pull-right" href="{!! route('remind') !!}">Forgot your password? <strong>Reset it!</strong></a>
                             </div>
                             <!-- /.panel-footer -->
 

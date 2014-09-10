@@ -26,34 +26,34 @@
                                 @include('layouts.partials.errors', ['errors' => $errors->getBag('default')])
 
                                 <!-- Begin Form -->
-                                {{ Form::open() }}
+                                {!! Form::open() !!}
 
                                     <!-- Email Form Input -->
-                                    <div class="form-group {{ hasError('email', $errors) }}">
-                                        {{ Form::label('email', 'Email:') }}
-                                        {{ Form::text('email', null, ['class' => 'form-control']) }}
+                                    <div class="form-group {!! hasError('email', $errors) !!}">
+                                        {!! Form::label('email', 'Email:') !!}
+                                        {!! Form::text('email', null, ['class' => 'form-control']) !!}
                                     </div>
 
                                     <!-- Password Form Input -->
-                                    <div class="form-group {{ hasError('password', $errors) }}">
-                                        {{ Form::label('password', 'Password:') }}
-                                        {{ Form::password('password', ['class' => 'form-control']) }}
+                                    <div class="form-group {!! hasError('password', $errors) !!}">
+                                        {!! Form::label('password', 'Password:') !!}
+                                        {!! Form::password('password', ['class' => 'form-control']) !!}
                                     </div>
 
                                     <!-- Password_confirmation Form Input -->
-                                    <div class="form-group {{ hasError('password_confirmation', $errors) }}">
-                                        {{ Form::label('password_confirmation', 'Re-enter Password:') }}
-                                        {{ Form::password('password_confirmation', ['class' => 'form-control']) }}
+                                    <div class="form-group {!! hasError('password_confirmation', $errors) !!}">
+                                        {!! Form::label('password_confirmation', 'Re-enter Password:') !!}
+                                        {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                                     </div>
 
-                                    {{ Form::hidden('token', $token) }}
+                                    {!! Form::hidden('token', $token) !!}
 
                                     <!-- Submit Form Input -->
                                     <div class="form-group">
-                                        {{ Form::submit('Reset Password', ['class' => 'btn btn-success form-control']) }}
+                                        {!! Form::submit('Reset Password', ['class' => 'btn btn-success form-control']) !!}
                                     </div>
 
-                                {{ Form::close() }}
+                                {!! Form::close() !!}
                                 <!-- End Form -->
 
                             </div>
