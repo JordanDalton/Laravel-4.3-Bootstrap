@@ -55,7 +55,7 @@ class AuthController extends Controller {
     {
         // Create a new user record.
         //
-        $user = $repository->create( $request->get('email'), $request->get('passsord') );
+        $user = $repository->create( $request->get('email'), $request->get('password') );
 
         // Log the user into their account.
         //
